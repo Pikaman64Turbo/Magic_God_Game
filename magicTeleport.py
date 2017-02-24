@@ -1,17 +1,35 @@
 import time
 import sys
-import inventory
+from Pouch import wpnChange
 #array_areaArena = [(0,0),(0,1),(1,0),(1,1),(1,-1),(0,1),(0,2),(1,2),(2,1),(2,2),(3,1),(3,2),(4,1),(4,2),(1,-2),(0,-1),(0,-2),(3,0),(4,0),(2,-1),(2,-2),(3,-1),(3,-2),(4,-1),(4,-2)]
 
 #AllowMov_y = true
 #AllowMov_x = true
 #AllowBac_y = true
 #AllowBac_x = true
+testCheck1 = moralChoice1 = input("Absorb him? ->")
+		moralChoice1 = moralChoice1.lower()
+		if moralChoice1 == "Yes":
+			print("You have absorbed your clone, you monster!")
+			timeOut(5)
+			print("You have gained the {}! (not yet implemented)".format(plazmaI))
+			wpnChange(plazmaI)
+		elif moralChoice1 == "No":
+			print("\"Nevermind\" You tell your defunct clone.")
+			timeOut(4)
+			print("??? looks at you with wicked drabness, \"What?!\"".format(gender1))
+			timeOut(4)
+			print("\"You heard me fully, and I'm feeling benevolent.\" You tell it.".format(gender1))
+			timeOut(5)
+			print("User-sama pats ??? defuct clone on the head. (+1 Morality)[not yet implemented]".format(playNom, gender2))
+		else:
+			print("You just walk away from the situation, wishing that this situation never happened.")
 whileVar = 0
 gender = ""
 gender1 = "notin"
 gender2 = "notin"
 plazmaI = "Electrocution I"
+testK = "Beta Knife"
 x = 0
 y = 0
 #Remember the WHILE Loop!!!
@@ -58,7 +76,7 @@ def moveWest():
 def timeOut(t):
 	time.sleep(t)
 
-replace(plazmaI)
+wpnChange(testK)
 print ("Hello, human player!")
 timeOut(2)
 print ("Welcome to the world of ______. This is your life now.")
@@ -179,7 +197,7 @@ while True:
 			print("You have absorbed your clone, you monster!")
 			timeOut(5)
 			print("You have gained the {}! (not yet implemented)".format(plazmaI))
-			replace(plazmaI)
+			wpnChange(plazmaI)
 		elif moralChoice1 == "No":
 			print("\"Nevermind\" You tell your defunct clone.")
 			timeOut(4)
