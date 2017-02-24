@@ -8,14 +8,12 @@ array_godPouch[2] = "[empty]"
 array_godPouch[3] = "[empty]"
 array_godPouch[4] = "[empty]"
 array_godPouch[5] = "[empty]"
-playNom = "Jefery"
-gender2 = "???"
 def replace(tool):
 	for i in range (1, 5):
 		if array_godPouch[i] != "[empty]":
 			replaceSlot = input("{}'s' has ran out of space in {} inventory, what slot shall you replace?".format(playNom, gender2))
 			array_godPouch[int(replaceSlot)] = tool
-			print(array_godPouch)
+			print(array_godPouch)("HELLLP!!!")
 
 #print(replace())
 
