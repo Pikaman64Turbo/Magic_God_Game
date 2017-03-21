@@ -11,6 +11,118 @@ import pickle
 #array_areaArena = [(0,0),(0,1),(1,0),(1,1),(1,-1),(0,1),(0,2),(1,2),(2,1),(2,2),(3,1),(3,2),(4,1),(4,2),(1,-2),(0,-1),(0,-2),(3,0),(4,0),(2,-1),(2,-2),(3,-1),(3,-2),(4,-1),(4,-2)]
 
 #This array information is used for inventory.
+
+class PlayerData:
+		def __init__(self, playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea):
+			self.playNom = playNom
+			self.woldNom = woldNom
+			self.gender = gender
+			self.gender1 = gender1
+			self.gender2 = gender2
+			self.gender3 = gender3
+			self.Town = Town
+			self.array_godPouch = array_godPouch
+def Save1():
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle.pickle', 'wb') as f:
+		pickle.dump(Player1, f)
+
+def Load1():
+	with open('mypickle.pickle', 'rb') as f:
+		Player1 = pickle.load(f)
+	#print(LoadedJessie.playNom)
+
+def Save2():
+	Player2 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle1.pickle', 'wb') as f:
+		pickle.dump(Player2, f)
+
+def Load2():
+	with open('mypickle1.pickle', 'rb') as f:
+		Player2 = pickle.load(f)
+
+def Save3():
+	Player3 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle2.pickle', 'wb') as f:
+		pickle.dump(Player3, f)
+
+def Load3():
+	with open('mypickle2.pickle', 'rb') as f:
+		Player3 = pickle.load(f)
+
+def Save4():
+	Player4 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle3.pickle', 'wb') as f:
+		pickle.dump(Player4, f)
+
+def Load4():
+	with open('mypickle3.pickle', 'rb') as f:
+		Player4 = pickle.load(f)
+
+def Save5():
+	Player5 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle4.pickle', 'wb') as f:
+		pickle.dump(Player5, f)
+
+def Load5():
+	with open('mypickle4.pickle', 'rb') as f:
+		Player5 = pickle.load(f)
+
+def Save6():
+	Player6 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle5.pickle', 'wb') as f:
+		pickle.dump(Player6, f)
+
+def Load6():
+	with open('mypickle5.pickle', 'rb') as f:
+		Player6 = pickle.load(f)
+
+def Save7():
+	Player7 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle6.pickle', 'wb') as f:
+		pickle.dump(Player7, f)
+
+def Load7():
+	with open('mypickle6.pickle', 'rb') as f:
+		Player1 = pickle.load(f)
+
+def Save8():
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle7.pickle', 'wb') as f:
+		pickle.dump(Player1, f)
+
+def Load8():
+	with open('mypickle7.pickle', 'rb') as f:
+		Player1 = pickle.load(f)
+
+def Save9():
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle8.pickle', 'wb') as f:
+		pickle.dump(Player1, f)
+
+def Load9():
+	with open('mypickle8.pickle', 'rb') as f:
+		Player1 = pickle.load(f)
+
+def Save10():
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	#print(Player1.playNom)
+	with open('mypickle9.pickle', 'wb') as f:
+		pickle.dump(Player1, f)
+
+def Load10():
+	with open('mypickle9.pickle', 'rb') as f:
+		Player1 = pickle.load(f)
+
 array_godPouch = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 array_godPouch[0] = "Fist"
 array_godPouch[1] = "[empty]"
@@ -37,7 +149,8 @@ testK = "Beta Knife"
 playNom = "User"
 woldNom = "Existance"
 moralChoice1 = "Yes"
-tehArea = 0
+Town = "Kentucky"
+tehArea = 1
 
 #This is used for Inventory.
 def Swapp(tool):
@@ -62,7 +175,7 @@ def test0():
 	if moralChoice1 == "Yes":
 		print("You have absorbed your clone, you monster!")
 		timeOut(5)
-		print("You have gained the {}! (not fully implemented)".format(plazmaI))
+		print("You have gained the {}!".format(plazmaI))
 		Swapp(plazmaI)
 	elif moralChoice1 == "No":
 		print("\"Nevermind\" You tell your defunct clone.")
@@ -152,8 +265,45 @@ def globalCommand(tehGame, badcommandstring):
 	if tehGame == "swap gender":
 		swapGender()
 
-	elif tehGame == "save game":
-		pass
+	elif tehGame == "save game 1":
+		Save1()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 2":
+		Save2()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 3":
+		Save3()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 4":
+		Save4()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 5":
+		Save5()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 6":
+		Save6()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 7":
+		Save7()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 8":
+		Save8()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 9":
+		Save9()
+		print("Your world has been saved... for now.")
+
+	elif tehGame == "save game 10":
+		Save10()
+		print("Your world has been saved... for now.")
 
 	elif tehGame  == "pouch":
 		print(array_godPouch)
@@ -161,21 +311,71 @@ def globalCommand(tehGame, badcommandstring):
 	else:
 		print(badcommandstring)
 
-class Save1(object):
-	name = "default name"
-
-    def __init__(self, woldNom, playNom, gender, gender1, gender2, gender3, Town):
-        self.woldNom = woldNom
-        self.playNom = playNom
-
-with open('company_data.pkl', 'wb') as :
-
-    company2 = pickle.load(input)
-    print(company2.name) # -> spam
-    print(company2.value)  # -> 42
 
 
+# class Save1(object):
+# 	name = "default name"
 
+#     def __init__(self, woldNom, playNom, gender, gender1, gender2, gender3, Town):
+#         self.woldNom = woldNom
+#         self.playNom = playNom
+
+# with open('company_data.pkl', 'wb') as :
+
+#     company2 = pickle.load(input)
+#     print(company2.name) # -> spam
+#     print(company2.value)  # -> 42
+
+
+tehGame = input("Would you like to load from a previous save or no? (load game []) >")
+if tehGame == "load game 1":
+	Load1()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 2":
+	Load2()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 3":
+	Load2()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 4":
+	Load4()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 5":
+	Load5()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 6":
+	Load6()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 7":
+	Load7()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 8":
+	Load8()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 9":
+	Load9()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "load game 10":
+	Load10()
+	print("Welcome back, {}".format(playNom))
+
+elif tehGame == "no":
+	print("LOL THIS DOES NOT WORK ANYWAYS!!")
+	pass
+
+else:
+	print("Fine then, I'll destroy the previous world.")
+
+timeOut(5)
 print ("Hello, human player!")
 timeOut (2)
 #sayHello()
@@ -281,8 +481,8 @@ while tehArea == 1:
 		print("Your computer is located on the end of this room. {} is sitting on a chair playing a game on a command prompt.".format(playNom))
 		timeOut(8)
 		print("\"What a loser,\" You tell yourself, \"I need to stop making defunct clones about myself\"")
-	elif tehGame == "read clone" or tehGame == "read defunct clone":
-		print("Defunct {}-sama's a gamer, and it's {} entire purpose.".format(playNom))
+	elif tehGame == "read defunct clone" or tehGame == "read clone":
+		print("Defunct {}-sama's a gamer, and it's {} entire purpose.".format(playNom, gender1))
 		timeOut(4)
 		print("Although, {} wasn't always that way... {} actually helped you create {}.".format(gender3, playNom, woldNom))
 		timeOut(6)
@@ -445,6 +645,7 @@ while tehArea == 2:
 		print("\"It'll be a cool little side story,\" {} contemplates about {} next actions.".format(playNom, gender1))
 		timeOut(5)
 		print("You never know what may lies beyond that, because Defunct {}-sama created this part of town.".format(playNom))
+	#elif tehGame ==
 	else:
 		globalCommand(tehGame, "Random passerbys of {} witness your gibberish and walk the other way.".format(Town))
 

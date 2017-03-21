@@ -15,7 +15,7 @@ def main():
 	with open('mypickle.pickle', 'wb') as f:
 		pickle.dump(Jessie, f)
 
-	with open('mypickle.pickle') as f:
+	with open('mypickle.pickle', 'rb') as f:
 		LoadedJessie = pickle.load(f)
 	print(LoadedJessie.playNom)
 
