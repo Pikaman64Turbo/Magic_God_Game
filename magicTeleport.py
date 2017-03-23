@@ -1,5 +1,5 @@
 import time
-import sys
+from sys import exit
 import pickle
 
 	#Ditched the idea of importing, it would be much easier to dump code from Pouch.py to magicTeleport.py
@@ -13,7 +13,7 @@ import pickle
 #This array information is used for inventory.
 
 class PlayerData:
-		def __init__(self, playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea):
+		def __init__(self, playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone):
 			self.playNom = playNom
 			self.woldNom = woldNom
 			self.gender = gender
@@ -23,105 +23,135 @@ class PlayerData:
 			self.Town = Town
 			self.array_godPouch = array_godPouch
 def Save1():
-	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
-	#print(Player1.playNom)
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
+	
 	with open('mypickle.pickle', 'wb') as f:
 		pickle.dump(Player1, f)
+	print(Player1.playNom, Player1.woldNom, Player1.Town, Player1.array_godPouch)
 
 def Load1():
 	with open('mypickle.pickle', 'rb') as f:
 		Player1 = pickle.load(f)
+	print("Welcome back, {}!".format(Player1.playNom))
+	tehArea = ""
 	#print(LoadedJessie.playNom)
 
 def Save2():
-	Player2 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player2 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle1.pickle', 'wb') as f:
 		pickle.dump(Player2, f)
+	print(Player2.playNom, Player2.woldNom, Player2.Town, Player2.array_godPouch)
 
 def Load2():
 	with open('mypickle1.pickle', 'rb') as f:
 		Player2 = pickle.load(f)
+	print("Welcome back, {}!".format(Player2.playNom))
+	tehArea = ""
 
 def Save3():
-	Player3 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player3 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle2.pickle', 'wb') as f:
 		pickle.dump(Player3, f)
+	print(Player3.playNom, Player3.woldNom, Playe3.Town, Player3.array_godPouch)
 
 def Load3():
 	with open('mypickle2.pickle', 'rb') as f:
 		Player3 = pickle.load(f)
+	print("Welcome back, {}!".format(Player3.playNom))
+	tehArea = ""
 
 def Save4():
-	Player4 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player4 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle3.pickle', 'wb') as f:
 		pickle.dump(Player4, f)
+	print(Player4.playNom, Player4.woldNom, Player4.Town, Player4.array_godPouch)
 
 def Load4():
 	with open('mypickle3.pickle', 'rb') as f:
 		Player4 = pickle.load(f)
+	print("Welcome back, {}!".format(Player4.playNom))
+	tehArea = ""
 
 def Save5():
-	Player5 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player5 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle4.pickle', 'wb') as f:
 		pickle.dump(Player5, f)
+	print(Player5.playNom, Player5.woldNom, Player5.Town, Player5.array_godPouch)
 
 def Load5():
 	with open('mypickle4.pickle', 'rb') as f:
 		Player5 = pickle.load(f)
+	print("Welcome back, {}!".format(Player5.playNom))
+	tehArea = ""
 
 def Save6():
-	Player6 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player6 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle5.pickle', 'wb') as f:
 		pickle.dump(Player6, f)
+	print(Player6.playNom, Player6.woldNom, Player6.Town, Player6.array_godPouch)
 
 def Load6():
 	with open('mypickle5.pickle', 'rb') as f:
 		Player6 = pickle.load(f)
+	print("Welcome back, {}!".format(Player6.playNom))
+	tehArea = ""
 
 def Save7():
-	Player7 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player7 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle6.pickle', 'wb') as f:
 		pickle.dump(Player7, f)
+	print(Player7.playNom, Player7.woldNom, Player7.Town, Player7.array_godPouch)
 
 def Load7():
 	with open('mypickle6.pickle', 'rb') as f:
 		Player1 = pickle.load(f)
+	print("Welcome back, {}!".format(Player7.playNom))
+	tehArea = ""
 
 def Save8():
-	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle7.pickle', 'wb') as f:
 		pickle.dump(Player1, f)
+	print(Player8.playNom, Player8.woldNom, Player8.Town, Player8.array_godPouch)
 
 def Load8():
 	with open('mypickle7.pickle', 'rb') as f:
 		Player1 = pickle.load(f)
+	print("Welcome back, {}!".format(Player8.playNom))
+	tehArea = ""
 
 def Save9():
-	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle8.pickle', 'wb') as f:
 		pickle.dump(Player1, f)
+	print(Player9.playNom, Player9.woldNom, Player9.Town, Player9.array_godPouch)
 
 def Load9():
 	with open('mypickle8.pickle', 'rb') as f:
 		Player1 = pickle.load(f)
+	print("Welcome back, {}!".format(Player9.playNom))
+	tehArea = ""
 
 def Save10():
-	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea)
+	Player1 = PlayerData(playNom, woldNom, gender, gender1, gender2, gender3, Town, array_godPouch, tehArea, moralChoice1, DefunctClone)
 	#print(Player1.playNom)
 	with open('mypickle9.pickle', 'wb') as f:
 		pickle.dump(Player1, f)
+	print(Player10.playNom, Player10.woldNom, Player10.Town, Player10.array_godPouch)
 
 def Load10():
 	with open('mypickle9.pickle', 'rb') as f:
 		Player1 = pickle.load(f)
+	print("Welcome back, {}!".format(Player10.playNom))
+	tehArea = ""
 
 array_godPouch = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 array_godPouch[0] = "Fist"
@@ -151,6 +181,11 @@ woldNom = "Existance"
 moralChoice1 = "Yes"
 Town = "Kentucky"
 tehArea = 1
+DefunctClone = False
+BedFalse = False
+Summon = 3
+shield1 = "Wooden Shield"
+bamb = "Fused Bomb"
 
 #This is used for Inventory.
 def Swapp(tool):
@@ -169,6 +204,12 @@ def Swapp(tool):
 
 def sayHello():
 	print("hello")
+
+def itemSearch(itemUse):
+	for i in range (1, 10):
+		if array_godPouch[i] == itemUse:
+			return True
+	return False
 
 def test0():
 	testCheck1 = moralChoice1 = input("Absorb him? (Yes or No) ->")
@@ -232,8 +273,7 @@ def moveWest():
 		y = newY
 	print ("Location = {}, {}".format(x, y))
 def timeOut(t):
-	#time.sleep(t)
-	pass
+	time.sleep(t)
 
 def swapGender():
 	global gender
@@ -249,7 +289,7 @@ def swapGender():
 		gender3 = "she"
 	elif (gender == "meme"):
 		print("Initiate the bogus.")
-		gender1 = "Dem thang."
+		gender1 = "Dem thang"
 		gender2 = "ROFLS"
 		gender3 = "???"
 		timeOut(3)
@@ -258,6 +298,8 @@ def swapGender():
 		gender1 = "it"
 		gender2 = "its"
 		gender3 = "it"
+
+
 
 
 def globalCommand(tehGame, badcommandstring):
@@ -330,7 +372,6 @@ def globalCommand(tehGame, badcommandstring):
 tehGame = input("Would you like to load from a previous save or no? (load game []) >")
 if tehGame == "load game 1":
 	Load1()
-	print("Welcome back, {}".format(playNom))
 
 elif tehGame == "load game 2":
 	Load2()
@@ -369,66 +410,66 @@ elif tehGame == "load game 10":
 	print("Welcome back, {}".format(playNom))
 
 elif tehGame == "no":
-	print("LOL THIS DOES NOT WORK ANYWAYS!!")
-	pass
-
-else:
-	print("Fine then, I'll destroy the previous world.")
-
-timeOut(5)
-print ("Hello, human player!")
-timeOut (2)
-#sayHello()
-#timeOut(2)
-#Swapp(testK)
-#timeOut (2)
-#test0()
-#timeOut(2)
-print ("Welcome to the world of ______. This is your life now.")
-timeOut(3)
-woldNom = input("What world do you live in? ->")
-print ("{} is filled with dangers in every corner. Realizm has escaped, and insanity is reality.".format(woldNom))
-timeOut(4)
-print ("This is the world that you have created, and you solely exist to rid the evils of {}.".format(woldNom))
-timeOut(5)
-print ("What I'm trying to say is {} is screwed.".format(woldNom))
-timeOut(4)
-print ("Your 'Good Deeds' are not defined in any vocabulary of mine, only you can define it. {} is on your shoulders.".format(woldNom))
-timeOut(6)
-print ("As a mortal god, it is your duty [and only your duty] to do 'Good Deeds'!")
-timeOut(3)
-playNom = input("I'm sorry, I forgot to ask for your name, God. ->")
-print ("Alright, {}-sama! The world of {} is in your hands. Do not waste your life!".format(playNom, woldNom))
-timeOut(4)
-print ("WAIT! I need to know something before we start.")
-timeOut(2)
-gender = input("Are you a boy are a girl? ->")
-gender = gender.lower()
-if (gender == "boy"):
-	gender1 = "him"
-	gender2 = "his"
-	gender3 = "he"
-	gender = "none"
-elif (gender == "girl"):
-	gender1 = "her"
-	gender2 = "hers"
-	gender3 = "she"
-elif (gender == "meme"):
-	print("Initiate the bogus.")
-	gender1 = "Dem thang."
-	gender2 = "ROFLS"
-	gender3 = "???"
+	timeOut(5)
+	print ("Hello, human player!")
+	timeOut (2)
+	#sayHello()
+	#timeOut(2)
+	#Swapp(testK)
+	#timeOut (2)
+	#test0()
+	#timeOut(2)
+	print ("Welcome to the world of ______. This is your life now.")
 	timeOut(3)
-else:
-	print("That is not a gender, you need to see your local physician.")
-	gender1 = "it"
-	gender2 = "its"
-	gender3 = "it"
+	woldNom = input("What world do you live in? ->")
+	print ("{} is filled with dangers in every corner. Realizm has escaped, and insanity is reality.".format(woldNom))
+	timeOut(4)
+	print ("This is the world that you have created, and you solely exist to rid the evils of {}.".format(woldNom))
+	timeOut(5)
+	print ("What I'm trying to say is {} is screwed.".format(woldNom))
+	timeOut(4)
+	print ("Your 'Good Deeds' are not defined in any vocabulary of mine, only you can define it. {} is on your shoulders.".format(woldNom))
+	timeOut(6)
+	print ("As a mortal god, it is your duty [and only your duty] to do 'Good Deeds'!")
+	timeOut(3)
+	playNom = input("I'm sorry, I forgot to ask for your name, God. ->")
+	print ("Alright, {}-sama! The world of {} is in your hands. Do not waste your life!".format(playNom, woldNom))
+	timeOut(4)
+	print ("WAIT! I need to know something before we start.")
+	timeOut(2)
+	gender = input("Are you a boy are a girl? ->")
+	gender = gender.lower()
+	if (gender == "boy"):
+		gender1 = "him"
+		gender2 = "his"
+		gender3 = "he"
+		gender = "none"
+	elif (gender == "girl"):
+		gender1 = "her"
+		gender2 = "hers"
+		gender3 = "she"
+	elif (gender == "meme"):
+		print("Initiate the bogus.")
+		gender1 = "Dem thang"
+		gender2 = "ROFLS"
+		gender3 = "???"
+		timeOut(3)
+	else:
+		print("That is not a gender, you need to see your local physician.")
+		gender1 = "it"
+		gender2 = "its"
+		gender3 = "it"
 
-print ("You are in your bedroom, try (examine Area) to see your immediate surroundings. Use (look South) to continue playing the game!")
-timeOut(1)
-print ("Use the \"Pouch\" command to view your inventory.")
-tehArea = 1
+	print ("You are in your bedroom, try (examine Area) to see your immediate surroundings. Use (look South) to continue playing the game!")
+	timeOut(1)
+	print ("Use the \"Pouch\" command to view your inventory.")
+	tehArea = 1
+
+else:
+	print("Fine then, I'll destroy the previous worlds.")
+	exit()
+
+
 while tehArea == 1:
 	tehGame = input("	>")
 	tehGame = tehGame.lower()
@@ -495,7 +536,7 @@ while tehArea == 1:
 		print("\"What a loser!\" The defunct clone of {} said while being glued into {} computer screen".format(woldNom, gender2))
 		timeOut(5)
 		print("(Death by Window) {} died by trusting the antagonist. (Hint, move North)".format(playNom))
-		sys.exit()
+		exit()
 	elif tehGame == "soviet russia":
 		print("In Soviet Russia, Putin plays you.")
 		timeOut(4)
@@ -520,22 +561,46 @@ while tehArea == 1:
 		print("\"Smooth move, idiot.\" {}'s clone shouts from the opposite end of the room.".format(playNom))
 		timeOut(5)
 		print("You don't bother to say anything as it would add fuel from the fire.")
+	elif tehGame == "zap bed":
+		if electorcuteBed == False:
+			if itemSearch(plazmaI):
+				print("In pure fustration, you destroy the bed with lightning.")
+				timeOut(4)
+				print("{} plumps down on the ashes, \"I've never felt so comfortable in my life\" You murmur.".format(playNom))
+				print(6)
+				print("You fall asleep, then awake by being consumed in soot.")
+				timeOut(4)
+				print("\"Yes.\" Your eyes water, \"A twenty year rest from toil.\"")
+				timeOut(4)
+				print("{} smiles.".format(playNom))
+				timeOut(3)
+				print("The bed magically regenerates.")
+				BedFalse = True
+			else:
+				print("Thout shall not zap if one cannot electrocute.")
+		else:
+			print("You've already destroyed your bed. The ashes have already polluted the room.")
 	elif tehGame == "sleep bed":
-		print("You plump down on the hard wooden surface.")
-		timeOut(5)
-		print("\"Wait a minute...\" You question.")
-		timeOut(3)
-		print("\"Wait a minute.....\"")
-		timeOut(5)
-		print("\"The floor is more comfortable than this!!\"")
-		timeOut(6)
-		print("{}'s defunct clone faceplams, \"That's why I created this chair! You were too busy creating the world that you skiped the conformaties!\"")
-		timeOut(10)
-		print("\"I'm not that lazy!\" You yell back at {}.".format(gender1))
-		timeOut(3)
-		print("\"You'd be surprised\" {} mouthsback then returns to playing Epic Teleporter Adventure.")
-		timeOut(5)
-		print("Easter Egg 'Patrick' found!")
+		if BedFalse == False:
+			print("You plump down on the hard wooden surface.")
+			timeOut(5)
+			print("\"Wait a minute...\" You question.")
+			timeOut(3)
+			print("\"Wait a minute.....\"")
+			timeOut(5)
+			print("\"The floor is more comfortable than this!!\"")
+			timeOut(6)
+			print("{}'s defunct clone faceplams, \"That's why I created this chair! You were too busy creating the world that you skiped the conformaties!\"".format(playNom))
+			timeOut(10)
+			print("\"I'm not that lazy!\" You yell back at {}.".format(gender1))
+			timeOut(3)
+			print("\"You'd be surprised\" {} mouthsback, then returns to playing Epic Teleporter Adventure.".format(gender2))
+			timeOut(5)
+			print("Easter Egg 'Patrick' found!")
+		else: 
+			print("You plump down on the hard wood floor covered with ash.")
+			timeOut(4)
+			print("You immediatly regret everything.")
 	elif tehGame == "read window" or tehGame == "read windows":
 		print("You look at the windows, very intently.")
 		timeOut(4)
@@ -548,6 +613,25 @@ while tehArea == 1:
 		print("\"HMMMMMMM...\"")
 		timeOut(3)
 		print("\"If I'm a mortal, why am I a god?\" You ask yourself.")
+	elif tehGame == "zap window":
+		if itemSearch(plazmaI):
+			print("You destroy the window and the void engulfs everything.")
+			timeOut(4)
+			print("\"Infinite sadness will bestow upon my entire essance!\" Were your final words.")
+			timeOut(7)
+			print("(Death by Window) hint: Do not destroy everything.")
+			exit()
+		else:
+			print("Do you want to die?!")
+	elif tehGame == "zap computer":
+		if itemSearch(plazmaI):
+			print("You electrocute the computer. It violently explodes.")
+			timeOut(5)
+			print("\"Gaming sould die in a fire!\" {}-sama spew out words with your tounge.".format(playNom))
+			timeOut(6)
+			print("\"Anything more important than me shall come to a violent end in dispair!\"")
+		else:
+			print("You do not possess this power... yet.")
 	elif tehGame == "move east":
 		if moralChoice1 == "Yes":
 			print("You barge into your defunct clone, \"What the blazes man!\" {}'s clone shouts.".format(playNom))
@@ -563,6 +647,7 @@ while tehArea == 1:
 				timeOut(5)
 				print("You have gained the {}! (not yet implemented)".format(plazmaI))
 				Swapp(plazmaI)
+				print("Use 'Zap [object]' to electrocute anything to a crisp.")
 				moralChoice1 = "False1"
 			elif Answer1 == "no":
 				print("\"Nevermind\" You tell your defunct clone.")
@@ -572,6 +657,15 @@ while tehArea == 1:
 				print("\"You heard me fully, and I'm feeling benevolent.\" You tell {}.".format(gender1))
 				timeOut(5)
 				print("{}-sama pats {} defuct clone on the head.".format(playNom, gender2))
+				timeOut(5)
+				print("\"Hey, I need to tell you that I can be your party member\" Defunct Clone tells you.")
+				timeOut(6)
+				print("\"Huh?\" You scratch your head.")
+				timeOut(3)
+				print("Yeah, you can use (Summon [character]) to teleport me to your location to assist you in combat, puzzles, and practically almost anything!")
+				timeOut(10)
+				print("You've obtained \"Defunct Clone\" as your party member!")
+				DefunctClone = True
 				moralChoice1 = "False2"
 			else:
 				print("You just walk away from the situation, wishing that this never happened.")
@@ -586,23 +680,78 @@ while tehArea == 1:
 			timeOut(3)
 			print("\"You'd be surprised.\" You tell {} back as you materialize bacon and throw it at him.".format(gender1))
 	elif tehGame == "move north":
-		print("You open the door and, finally, see what's beyond the tutorial.")
-		timeOut(3)
-		print("City (Central Area): This is the city that you’ve built around your house.")
-		timeOut(4)
-		print("{} thought that it was a grand idea to make the city without a mayor and a name.".format(playNom))
-		timeOut(5)
-		print("Knowing this, {} became the mayor of this town… and was too lazy to create a name for it.".format(gender3))
-		timeOut(7)
-		Town = input("What will you name your town? ->")
-		print("You shout to the world, \"I hereby call this nameless town {}!\"".format(Town))
-		timeOut(4)
-		print("Random passersbys bow down to your lordship.")
-		timeOut(4)
-		print("\"All hail the town, {}!\" They shout to the heavens.".format(Town))
-		timeOut(5)
-		print("{} also made himself the messiah of {}’s religion.".format(playNom, Town))
-		tehArea = 2
+		Summon += 1
+		print("Summon value = {}".format(Summon))
+		if TownNom == False:
+			print("You open the door and, finally, see what's beyond the tutorial.")
+			timeOut(3)
+			print("City (Central Area): This is the city that you’ve built around your house.")
+			timeOut(4)
+			print("{} thought that it was a grand idea to make the city without a mayor and a name.".format(playNom))
+			timeOut(5)
+			print("Knowing this, {} became the mayor of this town… and was too lazy to create a name for it.".format(gender3))
+			timeOut(7)
+			Town = input("What will you name your town? ->")
+			print("You shout to the world, \"I hereby call this nameless town {}!\"".format(Town))
+			timeOut(4)
+			print("Random passersbys bow down to your lordship.")
+			timeOut(4)
+			print("\"All hail the town, {}!\" They shout to the heavens.".format(Town))
+			timeOut(5)
+			print("{} also made himself the messiah of {}’s religion.".format(playNom, Town))
+			tehArea = 2
+			TownNom = True
+		else:
+			print("You make your way to the Town of {}".format(Town))
+	elif tehGame == "summon Defunct Clone":
+		if DefunctClone == True:
+			print("You've tried to summon your defunct clone!")
+			timeOut(4)
+			print(".")
+			timeOut(1)
+			print("..")
+			timeOut(1)
+			print("...")
+			timeOut(1)
+			print("A portal appeared and {}'s defunct clone came through!".format(playNom))
+			timeOut(4)
+			print("\"What do you want?!\" {} shouts.".format(gender3))
+			while Summon > 0:
+				tehGame = input("(Attack [noun], Smite [noun], Call Off. ->")
+				tehGame = tehGame.lower()
+				if tehGame == "attack bed":
+					print("Your clone zaps the bed with plazma.")
+					timeOut(3)
+					print("The bed is now in ashes.")
+					print("Your clone walks back to the computer.")
+					Summon -= 1
+				elif tehGame == "smite bed":
+					print("Your clone touches the bed and turned it into a wooden shield!")
+					Swapp(shield)
+					BedFalse = True
+					print("Your clone walks back to the computer.")
+					Summon -= 1
+				elif tehGame == "smite window":
+					print("Your clone touches the window and it explodes.")
+					timeOut(4)
+					print("(Death by Defunct Clone) hint: do not fool with windows.")
+					exit()
+				elif tehGame == "smite computer":
+					print("Your clone gives you a fuse bomb.")
+					Swapp(bamb)
+					timeOut(3)
+					print("\"I'm not smiting my computer.\" {}'s defunct clone tells {}.".format(playNom, gender1))
+					print("Your clone walks back to the computer.")
+					Summon -= 1
+				elif tehGame == "attack window":
+					print("Your clone breaks the window and everything is engulfed by the void.")
+					timeOut(5)
+					print("(Death by Idiotic Command) hint: do not fool with windows.")
+					exit()
+				elif tehGame == "call off":
+					print("\"What a waste...\" Your clone mutters as he walks back to his computer.")
+				else:
+					print("\"I do not understand such incipid language.\" {}'s clone questions your existance.".format(playNom))
 	else:
 		globalCommand(tehGame, "Please, don't use such foul language.")
 
