@@ -294,14 +294,13 @@ while tehArea == 1:
 		timeOut(4)
 		print ("Surprisingly, the both of you were too lazy to create an actual house.")
 		timeOut(2)
-		print ("You are in your bedroom, try (examine Area) to see your immediate surroundings. Use (look South) to continue playing the game!")
+		print ("Type (Options) to bring up available commands.")
 	elif tehGame == "look south":
 		print ("There's a window that peers out into darkness. You assume that it's a void.")
 		timeOut(6)
 		print ("There is a letter above the window.")
 		timeOut(4)
 		print ("'You can examine any noun [people, things, buildings, places] with the (read) command, even questionable items like #windows# and #people#.'")
-		print ("Try (examine Area) to see your immediate surroundings.")
 	elif tehGame == "punch clone" or tehGame == "punch defunct clone":
 		if DefunctCloneDED == False:
 			if DefunctClone == False:
@@ -1219,7 +1218,7 @@ while tehArea == 1:
 				print("Windowed Void's threat circles into your mind.")
 				timeOut(4)
 				Town = input("You try to erase those memories by naming your nameless town. ->")
-				print("On a whim, you snap your fingers and the name of this town is {} henceforth.".format(Town))
+				print("On a whim, you snap your fingers and the name of this town is {}, henceforth.".format(Town))
 				timeOut(5)
 				print("You continue on with your day; trying to move on as you conseal yourself with a cloak.")
 				tehArea = 2
@@ -1227,7 +1226,7 @@ while tehArea == 1:
 			if Purpose == "Corrupted":
 				print("{} move through the door, with all intent to destroy anything in your path.".format(playNom))
 				timeOut(5)
-				print("You see scattered civilians throughout the Town that is bestowed upon you.")
+				print("You see scattered civilians throughout the city that is bestowed upon you.")
 				timeOut(5)
 				print("\"Fresh... Experiance Points!\" {} slobbers.".format(playNom))
 				timeOut(4)
@@ -1288,6 +1287,8 @@ while tehArea == 1:
 				print("\'I need to go to the church...\' You think, \'My followers have been dwindling from my last visit.")
 				timeOut(7)
 				print("\'Let us all pray that no evil has bestowed upon this realm.\'")
+				tehArea = 2
+				TownNom = True
 			if Purpose == "Speedrunner":
 				print("You open the doors, and a nameless Town appears.")
 				timeOut(1)
@@ -1298,40 +1299,21 @@ while tehArea == 1:
 				print("\"Amen!\" {} yells to the crowd. {}'s the massiah.".format(playNom, gender1))
 				timeOut(1)
 				print("\"Praise the town, {}!\" Your nonexistant followers yell to the world.".format(Town))
+				tehArea = 2
+				TownNom = True
 			if Purpose == "Thug":
-				print("You went out th' door and shout, \"Ehmen!\"")
+				print("You punch the doors down with pride stimulating your sences.")
 				timeOut(5)
-				print("Nevhr minding the seatizins, you just realised that you've haven't named th' town yet!")
-				timeOut(8)
-				Town = input("Nam yer own town, brothah. ->")
-				print("\"Whelp, might as whell be {}!\" You yell to the skies and the clouds.")
-				timeOut(7)
-				print("Passerbies just sit n' staire at your own damn dialact.")
+				print("You grin as you see passerbys in this great big city.")
 				timeOut(5)
-				print("Brain sells seep owt your own pours...")
-				timeOut(0.5)
-				print("Wait a second, Player behind the screen, listen up good.")
-				timeOut(1)
-				print("The \"Thug\" Purpose was a mistake by my part, the modder.")
-				timeOut(4)
-				print("I understand that I joke about being lazy and all of that jazz, but in reality it's a serious habit that makes humanity at its worst.")
-				timeOut(11)
-				print("This \"Thug\" personality urks me as a human being.")
-				timeOut(6)
-				print("You may be asking, \"Why even bother keeping this in the game?\"")
-				timeOut(6)
-				print("Simply put, educate yourself and go outside, socialate!")
-				timeOut(7)
-				print("No one would bare to live with these type of people because they're just big idiots.")
-				timeOut(8)
-				print("Re-incarnate your world and character and pick another path to follow, being a Thug is more cowardice than being a corrupt, power-hungry-fool!")
-				timeOut(12)
-				print("Being a thug is more time-wasting than playing video games.")
-				timeOut(7)
-				print("Being a thug will never make you more attractive either, it makes you the ugliest person ever. Be nice, kind, and compasionate!")
+				print("The civilians scurry away from you with fear.")
+				timeOut(3)
+				print("\"I see that this town has no mayor.\" You talk aloud, \"I should head to the mayor's office and take over this city.\"")
 				timeOut(9)
-				print("(Death by a true thug [the modder]) hint: don't waste your life by crime, stay in school, and DON'T DO DRUGS!")
-				exit()
+				print("You stop to think... \"Where in the world is this office!\"")
+				timeOut(4)
+				print("\'No matter, I'll storm through this blasted place anyways...\'")
+				tehArea = 2
 		else:
 			print("You make your way to the Town of {}".format(Town))
 			tehArea = 2
@@ -1593,9 +1575,9 @@ while tehArea == 2:
 			timeOut(9)
 			print("Or, it's well known for its low prices.")
 			timeOut(4)
-			print("Ever since Cow-fill-a came into existance; McRonalds started cooking it's meat with freezer-quality meat patties.")
+			print("Ever since Cow-fill-a came into existance; McRonalds started cooking it's hamburgers with real, freezer-quality meat patties.")
 		elif tehGame == "read jonnie jim's" or tehGame == "read jonnie jims":
-			print("This building serves the freshest sandwhiches on the block; they serve it infront of you.")
+			print("This building serves the freshest sandwiches on the block; they serve it infront of you.")
 			timeOut(7)
 			print("Soubway once existed here, but after a lawsuit over a \"Foot-long Fraud\" claim, Jonnie Jim's reign its domination.")
 			timeOut(9)
@@ -1604,7 +1586,18 @@ while tehArea == 2:
 			print("Dairy King's been here since the creation of this world.")
 			timeOut(5)
 			print("You've been funding the place benevolently, because it contains your favorite food; Royal Blizzards.")
-		elif 
+		elif tehGame == "read cow-fill-a" or tehGame == "read cow fill a" or tehGame == "read cowfilla":
+			print("Surprisingly enough, this fast-food chain only sells beef products and salad.")
+			timeOut(6)
+			print("Cow-fill-a also gave McRonalds a run for its money during the \"Beef off\" where a lawsuit was set against McRonald's quality meat.")
+			timeOut(9)
+			print("Dispite being recognized as a \'Christian assosiated\' restaurant, Cow-fill-a almost forced McRonalds into bankruptcy through the food court.")
+		elif tehGame == "move east":
+			print("You feel a little hungry, so you move to the Food District.")
+			timeOut(5)
+			print("\'Might as well grab something for Clensed Clone...\' {} thinks.".format(playNom))
+			timeOut(4)
+			tehArea = 3 
 		elif tehGame == "look east":
 			print("Fast food restaurants lie in this quadrant of the city.")
 			timeOut(5)
@@ -1612,48 +1605,57 @@ while tehArea == 2:
 		elif tehGame == "look north":
 			print("A festival could be heard down the street.")
 			timeOut(4)
-			print("\'I should leave the happy folks alone; they are none of my concern at the momement\' {} thinks.")
-	else:
-		globalCommand(tehGame, "Random passerbys of {} witness your gibberish and walk the other way.".format(Town))
-	# if tehGame == "look west":
-	# 	print("Dank alleyways lie in this direction.")
-	# 	print(4)
-	# 	print("\"I shouldn’t go here…\" {} thinks. \"This is the roughest part of {}.\"".format(playNom, Town))
-	# elif tehGame == "look east":
-	# 	print("Restaurants and fast food chains rest over here.")
-	# 	timeOut(4)
-	# 	print("{}'s stomache growls with ferocity.")
-	# 	timeOut(3)
-	# 	print("\"My resentment toward main{}-sama grows ever so slightly.\" {} grovels.".format(playNom, playNom))
-	# 	timeOut(6)
-	# 	print("\"Why can't I create food, when I can create life, clones, and a whole planet?!\"")
-	# elif tehGame == "look south":
-	# 	print("Your house is located here.")
-	# 	print(3)
-	# 	print("\"Hey!\" You think out loud, \"I have a plot to follow, I can’t dwindle here!\"")
-	# 	timeOut(6)
-	# 	print("…")
-	# 	timeOut(1)
-	# 	print("\"Maybe… I missed something…\" {} continues to ponder.".format(gender1))
-	# 	print(5)
-	# 	print("If you did, I’m not going to tell you.")
-	# elif tehGame == "look north":
-	# 	print("The outskirts of {} are seen off in the distance.".format(Town))
-	# 	timeOut(5)
-	# 	print("\"This is where I need to be!\" {} exclaims.".format(playNom))
-	# 	timeOut(4)
-	# 	print("\"I've got things to do, places to see, and adventures to be had!\"")
-	# 	timeOut(5)
-	# 	print("The common folk of {} look at you with very confused eyes.".format(Town))
-	# elif tehGame == "read allyways" or tehGame == "read dank allyways":
-	# 	print("The rejects of this world lie here in the depts of {}.".format(Town))
-	# 	timeOut(4)
-	# 	print("\"It'll be a cool little side story,\" {} contemplates about {} next actions.".format(playNom, gender1))
-	# 	timeOut(5)
-	# 	print("You never know what may lies beyond that, because Defunct {}-sama created this part of town.".format(playNom))
-	#elif tehGame == "move west"
-	#	print("You scurry toward the west side of {}.".format(Town))
-	#elif tehGame ==
+			print("\'I should leave the happy folks alone; they are none of my concern at the momement\' {} thinks.".format(playNom))
+		else:
+			globalCommand(tehGame, "Random passerbys of {} witness your gibberish and walk the other way.".format(Town))
+	while Purpose == Scarred:
+		tehGame = input("	>")
+		tehGame = tehGame.lower()
+		if tehGame == "look south":
+			print("The portal has closed behind you; it no longer exists.")
+			timeOut(5)
+			print("{} does see an apartment complex behind {}, but this is no longer {}.".format(playNom, gender1, gender2))
+			timeOut(5)
+			print("\'I mustn't look back!\' {} thinks, \'Windowed Void can find me at any moment!\'")
+		elif tehGame == "look east":
+			print("Fast-food restaurants lie in this quadrant of the city,")
+			timeOut(4)
+			print("They are McRonalds and Soubway.")
+		elif tehGame == "read mcronalds":
+			print("This fast food chain is synonymous for its fake hamburger meat and chemical-rich fenchfries.")
+			timeOut(9)
+			print("Or, it's well known for its low prices.")
+			timeOut(4)
+			print("To compete with Soubway, McRonalds constructed Preminum Snack Wraps.")
+		elif tehGame == "read soubway":
+			print("This fast-food restaurant serves foot-long sandwiches and soups.")
+			timeOut(6)
+			print("There are rumors that these \'foot-long\' sandwiches are actually eleven inches; the food court always disclose these claims as rumours though.")
+		elif tehGame == "look west":
+			print("Clean allyways can be obviously seen here.")
+			timeOut(4)
+			print("This is none of your consern.")
+		elif tehGame == "look north":
+			print("A festival can be spotted infront of you.")
+			timeOut(4)
+			print("A positive emotion kindles in {}'s heart.".format(playNom))
+			timeOut(4)
+			print("\'I need a little break from all of this tension; a little sidetracking shouldn't hurt.\'")
+		else:
+			globalCommand(tehGame, "Random passerbys of {} witness your gibberish and walk the other way.".format(Town))
+else:
+	pass
+while tehArea == 3:
+	while Purpose == Pure:
+		print("You've found your way to a bustling mall filled to the brim with food items.")
+		timeOut(4)
+		print("McRonalds, Dairy King, Jonnie Jim's, and Cow-fill-a were the only fast-food chains that take your intrests.")
+		timeOut(6)
+		print("\'I'm too busy to eat at a legitimate restaurant right now.\' You think.")
+		tehGame == input("(visit [place]) ->")
+		#if :
+		#	pass
+
 
 	#print ("Sample Text!!!")
 	#print ("(Unfinished Demo){} died by an unfinished game.".format(playNom))
